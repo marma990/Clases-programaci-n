@@ -1,0 +1,62 @@
+class Auto {
+
+    String marca;
+    int velocidad;
+
+    void acelerar() {
+        velocidad = velocidad + 10;
+    }
+
+    void desacelerar() {
+        velocidad = velocidad - 10;
+    }
+
+    void mostrarEstado() {
+        System.out.println("Marca: " + marca);
+        System.out.println("Velocidad: " + velocidad);
+        if (velocidad > 0) {
+            System.out.println( "El auto está en movimiento.");
+        } else {
+            System.out.println( "El auto está quieto.");
+        }
+    }
+}
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Auto auto1 = new Auto();
+
+        auto1.marca = "Toyota";
+        auto1.velocidad = 0;
+        
+        auto1.mostrarEstado();
+        System.out.println("AUTO - - - - META" );
+        auto1.acelerar();
+        auto1.mostrarEstado();
+
+        System.out.println("- AUTO - - - META" );
+        auto1.acelerar();
+        auto1.mostrarEstado();
+
+        System.out.println("- - AUTO - - META" );
+        auto1.acelerar();
+        auto1.mostrarEstado();
+       
+        System.out.println("- - - AUTO - META" );
+        auto1.acelerar();
+        auto1.mostrarEstado();
+
+        System.out.println("- - - - AUTO META" );
+        auto1.desacelerar();
+        auto1.mostrarEstado();
+
+        System.out.println("- - - - - AUTA" );
+        auto1.velocidad = 0;
+        auto1.mostrarEstado();
+        System.out.println("Te has estrellado");
+    }
+
+}
